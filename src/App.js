@@ -1,8 +1,12 @@
 
 import React from 'react';
-import './App.css';
+import Nav from './components/nav';
 import AboutPage from './components/about';
-import HomePage from './components/HomePage';
+import HomePage from './components/home';
+import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; // We just named BrowserRouter to Router
+
+
 
 
 
@@ -10,11 +14,18 @@ import HomePage from './components/HomePage';
 
 function App() {
   return (
-    <h1>
-      <HomePage />
-      <AboutPage />
+    <Router> 
+        <h1>
+        <Nav />
+        <Switch>
+        <Route path="/" exact component = {HomePage} />
+      <Route path="/about" component = {AboutPage}  />
+        </Switch>
+        
       
     </h1>
+    </Router>
+    
   );
 }
 
