@@ -22,7 +22,7 @@ function Nav() {
                 <Link onClick={() => setOpen(!open)} to='/about'>
                 <li>About</li>
                 </Link>
-                <Link >
+                <Link onClick={() => setOpen(!open)} to='/contact' >
                 <li className="no-border">Contact</li>
                 </Link>               
             </ul> 
