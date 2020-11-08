@@ -1,21 +1,18 @@
-
 import React from 'react';
 
 
 
-
-function HomePage() {
+function ContactPage() {
     
 
 
     return (
         <div className="body">
-
-       
-            <div class="container">
+           
+            <div class="container about-container contact-container">
                     
-                <div class="big-show">
-                    <h1>Invent <br/>Onwards &amp; Upwards Inovation</h1>
+                <div class="big-show about-show about-contact">
+                <h1>About Your Needs <br/> &amp; Our Mission To Elevate</h1>
                 </div>
 
             </div>
@@ -36,11 +33,8 @@ function HomePage() {
                     </footer>
                 </div>
         
-            
-        
-        </div> 
-        
+            </div>
     )
 }
 
-export default HomePage
+export default ContactPage

@@ -1,23 +1,95 @@
-.App {
+.body{
+  display:grid;
+  grid-template-rows: 1fr 50vh auto 1fr;
+  /* grid-template-columns: 2fr 2fr; */
+  grid-template-areas: 
+  "nav"
+  "main"
+  "info"
+  "foot";
+}
+.nav-area{
+  grid-area: nav;
+  display: flex;
+  justify-content: space-around;
+  /* min-height: 10vh; */
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #fc5e92 ;
+  color: #ffffff;
+}
+.container {
+  grid-area: main;
+  background: url(./img/white-bubble-illustration-1111372.jpg) no-repeat 0 -100px;
+  background-size: 100%;
+  background-position: center;
+
+  /* text-align: center; */
+  color: #cf5e5e;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-container {
+  background: url(./img/standing-white-t.JPG) no-repeat 0 -50px;
+  background-size: 60% ;
+  background-position: center;
+}
+.contact-container {
+  background: url(./img/standing-white-t.JPG) no-repeat 0 -50px;
+  background-size: 100% ;
+  background-position: center;
+}
+.text-area {
+  grid-area: info;
+  color:#000000;
+  font-size: 0.6em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: lighter;
+  padding: 40px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer-area {
+  grid-area: foot;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #fc5e92 ;
+  color: #ffffff70;
+  font-weight: lighter;
+  font-size: 0.6em;
+}
+/*//////////////////////////////////////////////////////////////////////////////*/
+.big-show h1, .about-show h1 {
+  align-content: center;
+  /* padding: 120px 10px 50px 10px; */
+  
+   font-size: 3.5rem auto ;
+   /* margin-bottom: 20px; */
+   color: #fafaf8;
+   /* border-bottom: #ffffff solid 2px; */
+   /* border-top: #ffffff solid 2px;*/
+   font-weight: lighter;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.about-show h1 {
+  color: #fc5e92 ;
+  border-top: #ffffff solid 0px;
+  /* padding: 120px 0 50px 0; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.big-show, .about-show, .about-contact {
+  /* min-height: 500px; */
+  background-image: url(./img/white-bubble-illustration-1111372.jpg) no-repeat 0 -70px;
+  background-size: 100%;
+  background-position: center;
+  text-align: center;
+  color: #cf5e5e;
+  
 }
-* {
-  margin: 0;
-  padding:0;
-  box-sizing: border-box;
-}
-
+/*//////////////////////////////////////////////////////////////////////////////*/
 li {
   list-style-type: none;
 }
@@ -25,47 +97,37 @@ li {
 a {
   text-decoration: none;
 }
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  min-height: 10vh;
-  align-items: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #fc5e92 ;
-  color: #ffffff;
-}
-
 nav .logo {
   font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
 }
-
 nav .nav-links {
   display:flex;
   justify-content: space-around;
   width: 32%;
 }
-
 nav .nav-links a {
   font-size: 18px;
   font-weight: normal;
   color: #ffffff;
   cursor: pointer;
 }
-
 nav .nav-links a:hover {
   text-decoration: none;
 }
-
 nav .burger {
   font-size: 28px;
   display: none;
   cursor: pointer;
 }
-
+/*//////////////////////////////////////////////////////////////////////////////*/
 @media all and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+  }
   nav .burger {
     display:block;
   }
@@ -83,113 +145,44 @@ nav .burger {
   }
   nav .nav-links li {
     padding: 25px;
+  }
+  nav .nav-links li {
     border-bottom: 1px solid #cccccc;
   }
-  nav .nav-links li:last-of-type{
-    border-bottom: 0px solid #cccccc;
-  }
-  nav .nav-links a:hover {
+  nav .nav-links .no-border {
+  border-bottom: 0px solid #cccccc;
+ }
+  nav .nav-links Link:hover {
     border-bottom: 0px solid #ffffff;
   }
-  .showcase, .about-show {
-    min-height: 500px;
-    background: url(./img/white-bubble-illustration-1111372.jpg) no-repeat 0 -100px;
-    background-size: 100%;
-    text-align: center;
-    color: #cf5e5e;
-    
- }
- .about-show {
-  background: url(./img/standing-white-t.JPG) no-repeat 0 -50px;
-  background-size: 100%;
-  
-
- }
- .showcase h1, .about-show h1 {
-   align-content: center;
-   padding: 50px 0 50px 0;
-   
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+  .about-container {
+    background: url(./img/standing-white-t.JPG) no-repeat 0 -50px;
+    background-size: 100% ;
+    background-position: center;
+  }
+  .big-show h1, .about-show h1 {
+    align-content: center;
+    font-size: 2.5rem  ;
     color: #fafaf8;
-    /* border-bottom: #ffffff solid 2px;
-    border-top: #ffffff solid 2px; */
-    font-weight: 300px;
+    font-weight: lighter;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- }
- .about-show h1 {
-   color: #fc5e92 ;
- }
- .container {
-   min-height: 40vh ;
- }
- .containerAbout {
-   
-   padding: 70px;
- }
- .text {
-   color:#000000;
-   font-size: 0.6em;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   font-weight: lighter;
-   padding: 40px
- }
- .about-text {
-  min-height: 35vh;
-  padding: 40px;
-}
- 
-
- footer {
-  display: flex;
-  justify-content: space-around;
-  min-height: 10vh;
-  align-items: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #fc5e92 ;
-  color: #ffffff70;
-  font-weight: lighter;
-  font-size: 0.6em;
- }
-
- 
- 
-  
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
