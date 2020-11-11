@@ -12,13 +12,13 @@ function ContactPage() {
             <div class="container about-container contact-container">
                     
                 <div class="big-show about-show about-contact">
-                <h1>About Your Needs <br/> &amp; Our Mission To Elevate</h1>
+                <h1>Connection To Create</h1>
                 </div>
 
             </div>
                 
                 <div className="text-area">
-                    <p class="text">
+                    <p class="text contact-text">
                     Twitter
                      <br />
                      Instagram

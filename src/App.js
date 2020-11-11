@@ -4,7 +4,7 @@ import Nav from './components/nav';
 import AboutPage from './components/about';
 import HomePage from './components/home';
 import ContactPage from './components/contact';
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; // We just named BrowserRouter to Router
 
 
