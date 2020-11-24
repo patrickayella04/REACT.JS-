@@ -7,7 +7,7 @@ function AboutPage() {
 
 
     return (
-        <div className="body">
+        <div className="body"> 
            
             <div class="container about-container">
                     

@@ -12,20 +12,20 @@ function ContactPage() {
             <div class="container about-container contact-container">
                     
                 <div class="big-show about-show about-contact">
-                <h1>Connection To Create</h1>
+                   <h1>Connection To Create</h1>
                 </div>
 
             </div>
                 
                 <div className="text-area">
-                    <p class="text contact-text">
+                    <p class="text contact-text"> 
                     Twitter
                      <br />
                      Instagram
                     <br />
                     Email
                     </p>
-                </div>
+                 </div>
 
 
                 

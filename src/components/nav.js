@@ -18,7 +18,7 @@ function Nav() {
             <ul className="nav-links"style={{ transform: open ? "translateX(0px)" : "" }}>
             <Link onClick={() => setOpen(!open)} to='/' >
                 <li>Home</li>
-                </Link>
+                </Link> 
                 <Link onClick={() => setOpen(!open)} to='/about'>
                 <li>About</li>
                 </Link>
